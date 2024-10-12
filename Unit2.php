@@ -214,6 +214,17 @@ function scanDirectory()
         echo $file."<br>";
     }
 }
+function openDirectory()
+{
+    $directory="C:\Rakesh Swami";
+    $dirHandle=opendir($directory);
+    if($dirHandle)
+    {
+        while(($file=readdir($dirHandle))!=false)
+            echo "$file<br>";
+    }
+}
 //createDirectory();
 //scanDirectory();
+//openDirectory();
 ?>
