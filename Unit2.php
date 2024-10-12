@@ -115,7 +115,7 @@ function pregMatchAll()//search entire string.
 }
 function pregMatchAll1()
 {
-    $name="Rakesh Ramesh Radhika Reshma Rupali Rekha";
+    $name="Rakesh Ramesh Radhika Reshma Rupali Rani";
     preg_match_all("/[Ra]/",$name,$array);
     echo"<pre>";
     print_r($array);
@@ -173,10 +173,33 @@ function _writeMode()
     $filePointer1=fopen("myFile.txt","r");
     echo fgets($filePointer1);
 }
+function appendMode()
+{
+    $filePointer=fopen("myFile.txt","a");//File oppened in append mode.
+    fwrite($filePointer,"My name is Neel.");
+    fclose($filePointer);
+    $filePointer=fopen("myFile.txt","r");//File opened in read mode only.
+    echo fgets($filePointer);
+}
+function _unlinkFunction()
+{
+    $filePointer=unlink("myFile.txt");//This function will deleted the file from your storage.
+    if($filePointer)
+    {
+        echo "File deleted!";
+    }
+    else
+    {
+        echo "Error!";
+    }
+}
 //_readFile();
 //_fopen();
 //_fgetc();
 //_writeMode();
+//appendMode();
+//_unlinkFunction();
+
 
 
 ?>
