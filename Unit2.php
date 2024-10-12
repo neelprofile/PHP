@@ -158,15 +158,25 @@ function _fopen()
 }
 function _fgetc()
 {
-    $fptr=fopen("raw.txt","r");
+    $fptr=fopen("myFile.txt","r");
     //echo fgetc($fptr);
     while($ch=fgetc($fptr))
         echo $ch;
     fclose($fptr);//closed open file after doing operations on file. It is good practice.
 }
+function _writeMode()
+{
+    $filePointer=fopen("myFile.txt","w");
+    $text="Author: Rakesh Swami";
+    fwrite($filePointer,$text);//It will overwrite.
+    fclose($filePointer);
+    $filePointer1=fopen("myFile.txt","r");
+    echo fgets($filePointer1);
+}
 //_readFile();
 //_fopen();
 //_fgetc();
+_writeMode();
 
 
 ?>
