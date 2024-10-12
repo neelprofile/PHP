@@ -224,7 +224,12 @@ function openDirectory()
             echo "$file<br>";
     }
 }
+function removeDirectory()
+{
+    rmdir("Sample");
+}
 //createDirectory();
 //scanDirectory();
 //openDirectory();
+//removeDirectory();
 ?>
