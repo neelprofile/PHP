@@ -199,7 +199,11 @@ function _unlinkFunction()
 //_writeMode();
 //appendMode();
 //_unlinkFunction();
-
-
-
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------Directories in PHP------------------------------------------------------*/
+function createDirectory()//To create directory
+{
+    mkdir("Sample");//It will create new folfer in your htdocs folder named "Sample".
+}
+//createDirectory();
 ?>
