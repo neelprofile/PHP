@@ -205,5 +205,15 @@ function createDirectory()//To create directory
 {
     mkdir("Sample");//It will create new folfer in your htdocs folder named "Sample".
 }
+function scanDirectory()
+{
+    $fileDirectory="C:\Rakesh Swami";
+    $files=scandir($fileDirectory);//It returns array of files.
+    foreach($files as $file)
+    {
+        echo $file."<br>";
+    }
+}
 //createDirectory();
+//scanDirectory();
 ?>
