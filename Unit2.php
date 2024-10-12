@@ -176,7 +176,7 @@ function _writeMode()
 //_readFile();
 //_fopen();
 //_fgetc();
-_writeMode();
+//_writeMode();
 
 
 ?>
