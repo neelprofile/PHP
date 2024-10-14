@@ -231,7 +231,8 @@ function removeDirectory()
 function appendFile()
 {
     $fptr=fopen("Index.txt","a");
-    fwrite($fptr,"Swami");
+    $count=1;
+    fwrite($fptr,$count);
     fclose($fptr);
     $fptr=fopen("Index.txt","r");
     echo fgets($fptr);
