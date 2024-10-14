@@ -228,8 +228,18 @@ function removeDirectory()
 {
     rmdir("Sample");
 }
+function appendFile()
+{
+    $fptr=fopen("Index.txt","a");
+    fwrite($fptr,"Swami");
+    fclose($fptr);
+    $fptr=fopen("Index.txt","r");
+    echo fgets($fptr);
+    fclose($fptr);
+}
 //createDirectory();
 //scanDirectory();
 //openDirectory();
 //removeDirectory();
+//appendFile();
 ?>
